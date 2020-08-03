@@ -1,0 +1,22 @@
+#border{
+    border: solid red 10px;
+   margin: auto;
+   width: 560px;
+   margin-top: 50px;
+}
+#flex1 > input, #flex2 > input,  #flex3 > input,  #flex4 > input {
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 1px;
+padding: 10px;
+
+}
+#flex-container{
+justify-content: center;
+text-align: center;
+align-items: center;
+border: purple solid 10px;
+width: 540px;
+background-color: purple;
+}
