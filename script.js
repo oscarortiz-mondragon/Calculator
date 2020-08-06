@@ -15,35 +15,38 @@ let history = document.getElementById("history")
 let equal = document.querySelector("#equal")
 
 
-equal.addEventListener('click',function(){
+equal.addEventListener('click',function(p,his){
     if(history.innerText == ""){
-        f = new Function(`para.textContent`, `return para.textContent`)
-        history.innerText = f(para.textContent)
+        let p = para.textContent
+        history.innerText =  new Function(`return ` + p)()
         para.textContent = ""
+      
     }
    else if(history.innerText != ""){
-       history.innerText =  eval(history.innerText + para.textContent)
-       para.textContent = ""
-      
+       let p = para.textContent
+       let his = history.innerText
+       history.innerText =  new Function(`return `+ p + his)()
+       
+    para.textContent = ""
+    
   
    }
 })
 
+  
 for(let i = 0; i < div.length-1; i++)
 {
   
     div[i].addEventListener('click', function(){
         if(para.innerText == "")
     {
-    para.innerText = div[i].innerText
+    para.innerText = history.textContent+ div[i].innerText
+    history.innerText = ""
     }
         else if(para.innerText != "")
     {
             para.innerText = para.innerText + div[i].innerText
+            
     }
    
     })};
-
-let apple = "10 + 10"
-for(let i = 0; i < apple.length; i++){
- cheese = parseInt(apple[i])}
